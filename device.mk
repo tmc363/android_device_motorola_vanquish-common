@@ -53,9 +53,31 @@ PRODUCT_COPY_FILES += \
 
 #wifi firmware
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/firmware/wlanprima/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-	$(LOCAL_PATH)/firmware/wlanprima/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
-	$(LOCAL_PATH)/firmware/wlanprima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+	$(LOCAL_PATH)/proprietary/wlanprima/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+	$(LOCAL_PATH)/proprietary/wlanprima/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
+	$(LOCAL_PATH)/proprietary/wlanprima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+
+#adreno
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/proprietary/adreno/etc/firmware/a225_pfp.fw:system/etc/firmware/a225_pfp.fw \
+	$(LOCAL_PATH)/proprietary/adreno/etc/firmware/a225_pm4.fw:system/etc/firmware/a225_pm4.fw \
+	$(LOCAL_PATH)/proprietary/adreno/etc/firmware/a225p5_pm4.fw:system/etc/firmware/a225p5_pm4.fw \
+	$(LOCAL_PATH)/proprietary/adreno/etc/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
+	$(LOCAL_PATH)/proprietary/adreno/etc/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw \
+	$(LOCAL_PATH)/proprietary/adreno/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
+	$(LOCAL_PATH)/proprietary/adreno/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
+	$(LOCAL_PATH)/proprietary/adreno/lib/egl/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
+	$(LOCAL_PATH)/proprietary/adreno/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
+	$(LOCAL_PATH)/proprietary/adreno/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
+	$(LOCAL_PATH)/proprietary/adreno/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
+	$(LOCAL_PATH)/proprietary/adreno/lib/egl/libGLESv2S3D_adreno200.so:system/lib/egl/libGLESv2S3D_adreno200.so \
+	$(LOCAL_PATH)/proprietary/adreno/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
+	$(LOCAL_PATH)/proprietary/adreno/lib/libC2D2.so:system/lib/libC2D2.so \
+	$(LOCAL_PATH)/proprietary/adreno/lib/libc2d2_z180.so:system/lib/libc2d2_z180.so \
+	$(LOCAL_PATH)/proprietary/adreno/lib/libgsl.so:system/lib/libgsl.so \
+	$(LOCAL_PATH)/proprietary/adreno/lib/libOpenVG.so:system/lib/libOpenVG.so \
+	$(LOCAL_PATH)/proprietary/adreno/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so
+
 
 PRODUCT_LOCALES := en_US
 PRODUCT_LOCALES += xhdpi
@@ -79,7 +101,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320 \
 	debug.egl.hw=1 \
-	debug.enabletr=1
+	debug.sf.hw=1 \
+	persist.sys.ui.hw=true \
+	debug.composition.type=c2d \
+	debug.enabletr=0
 
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -220,43 +220,6 @@ case "$target" in
         ;;
 
     "msm8960")
-        # lcd density is write-once. Hence the separate switch case
-        case "$soc_hwplatform" in
-            "Liquid")
-                if [ "$soc_hwver" == "196608" ]; then # version 0x30000 is 3D sku
-                    setprop ro.sf.hwrotation 90
-                fi
-
-                setprop ro.sf.lcd_density 160
-                ;;
-            "MTP")
-                setprop ro.sf.lcd_density 240
-                ;;
-            *)
-                case "$soc_hwid" in
-                    "109")
-                        setprop ro.sf.lcd_density 160
-                        ;;
-                    *)
-                        setprop ro.sf.lcd_density 240
-                        ;;
-                esac
-            ;;
-        esac
-
-        #Set up composition type based on the target
-        case "$soc_hwid" in
-            109| 116 | 117 | 118 | 120 | 121| 130)
-                #APQ8064, MSM8930, MSM8630, MSM8230,
-                # MSM8627, MSM8227, MPQ8064
-                setprop debug.composition.type gpu
-                ;;
-            *)
-                #8960
-                setprop debug.composition.type dyn
-                ;;
-        esac
-
         init_DMM
         ;;
 esac

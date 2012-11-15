@@ -57,14 +57,6 @@ etc/thermald.conf
 etc/wifi/hostapd_default.conf
 etc/wifi/wpa_supplicant.conf
 
-##graphics
-lib/egl/eglsubAndroid.so
-lib/egl/libEGL_adreno200.so
-lib/egl/libGLESv1_CM_adreno200.so
-lib/egl/libGLESv2_adreno200.so
-lib/egl/libGLESv2S3D_adreno200.so
-lib/egl/libq3dtools_adreno200.so
-
 #HAL
 lib/hw/camera.msm8960.so
 lib/hw/gps.default.so
@@ -82,7 +74,6 @@ lib/libaudioalsa.so
 lib/libbabysit.so
 lib/libbson.so
 lib/libbt-aptx-4.0.4.so
-lib/libC2D2.so
 lib/libcaps.so
 lib/libchromatix_ov8820_default_video.so
 lib/libchromatix_ov8820_hfr_60fps.so
@@ -107,7 +98,6 @@ lib/libfrsdk.so
 lib/libgemini.so
 lib/libgps.so
 lib/libgps.utils.so
-lib/libgsl.so
 lib/libidl.so
 lib/libimage-jpeg-enc-omx-comp.so
 lib/libimage-omx-common.so
@@ -148,7 +138,6 @@ lib/libOmxQcelp13Dec.so
 lib/libOmxWmaDec.so
 lib/libOpenCL.so
 lib/libopenssl-smime.so
-lib/libOpenVG.so
 lib/libpanorama_jni.so
 lib/libpanorama.so
 lib/libpn544_fw.so
@@ -168,8 +157,6 @@ lib/libQWiFiSoftApCfg.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 lib/libsarqmictrl.so
-lib/libsc-a2xx.so
-lib/libsc-a3xx.so
 lib/libsensor1.so
 lib/libsensorhub_jni.so
 lib/libsensor_reg.so
@@ -196,14 +183,7 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 
 # graphics firmware
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
 etc/firmware/cyttsp_8960_cdp.hex
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
 etc/firmware/vidc_1080p.fw
 etc/firmware/vidc.b00
 etc/firmware/vidc.b01
