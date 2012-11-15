@@ -6,7 +6,6 @@ bin/ap_gain.bin
 bin/ap_gain_mmul.bin
 bin/ATFWD-daemon
 bin/batch
-bin/batt_health
 bin/bridgemgrd
 bin/btnvtool
 bin/cnd
@@ -16,28 +15,24 @@ bin/ds_fmc_appd
 bin/dun-server
 bin/enc_mgt_tool
 bin/fmconfig
-bin/modemlog
 bin/mpdecision
 bin/netmgrd
 bin/nl_listener
 bin/port-bridge
 bin/ptt_socket_app
 bin/radish
-bin/recover_userdata
 bin/rmt_storage
 bin/sensors.qcom
 bin/thermald
 bin/time_daemon
 bin/timedexec
 bin/wiperiface_v02
-bin/mot_boot_mode
 #moto bins
 bin/whisperd
 bin/tcmd
 bin/tcmdhelp
 bin/ftmdaemon
 bin/ftmipcd
-bin/charge_only_mode
 
 #qcom bins
 bin/qseecomd
@@ -48,7 +43,6 @@ bin/qmiproxy
 bin/qmuxd
 bin/quipc_igsn
 bin/quipc_main
-bin/graphicsd
 bin/hci_qcomm_init
 bin/mm-pp-daemon
 bin/mm-qcamera-daemon
