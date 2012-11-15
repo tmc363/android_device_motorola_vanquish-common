@@ -7,11 +7,10 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product, device/motorola/msm8960-common/msm8960.mk)
 
-LOCAL_PATH := device/motorola/xt925
+LOCAL_PATH := device/motorola/vanquish-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
 
 #scripts
 PRODUCT_COPY_FILES += \
@@ -115,9 +114,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     $(LOCAL_PATH)/idc/evfwd.idc:system/usr/idc/evfwd.idc
 
-$(call inherit-product-if-exists, vendor/motorola/xt925/xt925-vendor.mk)
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_xt925
-PRODUCT_DEVICE := xt925
-

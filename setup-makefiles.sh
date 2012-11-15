@@ -1,7 +1,5 @@
 #!/bin/sh
 
-VENDOR=motorola
-DEVICE=xt925
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
@@ -41,8 +39,16 @@ EOF
 
 LINEEND=" \\"
 
-COUNT=`cat proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app' | wc -l | awk {'print $1'}`
-for FILE in `cat proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app'`; do
+COUNT=`cat ../${DEVICE}/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app' | wc -l | awk {'print $1'}`
+for FILE in `cat ../${DEVICE}/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app'`; do
+    COUNT=`expr $COUNT - 1`
+    if [ $COUNT = "0" ]; then
+        LINEEND=""
+    fi
+    echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
+done
+COUNT=`cat ../vanquish-common/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app' | wc -l | awk {'print $1'}`
+for FILE in `cat ../vanquish-common/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app'`; do
     COUNT=`expr $COUNT - 1`
     if [ $COUNT = "0" ]; then
         LINEEND=""
