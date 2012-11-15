@@ -44,6 +44,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml \
 	$(LOCAL_PATH)/config/media_codecs.xml:system/etc/media_codecs.xml
 
+#audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
+
 #config
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/config/vold.fstab:system/etc/vold.fstab
