@@ -102,6 +102,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320 \
 	debug.egl.hw=1 \
 	debug.sf.hw=1 \
+	debug.gr.numframebuffers=3 \
 	persist.sys.ui.hw=true \
 	debug.composition.type=c2d \
 	debug.enabletr=0
