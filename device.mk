@@ -110,15 +110,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so \
-	persist.rild.nitz_plmn= \
-	persist.rild.nitz_long_ons_0= \
-	persist.rild.nitz_long_ons_1= \
-	persist.rild.nitz_long_ons_2= \
-	persist.rild.nitz_long_ons_3= \
-	persist.rild.nitz_short_ons_0= \
-	persist.rild.nitz_short_ons_1= \
-	persist.rild.nitz_short_ons_2= \
-	persist.rild.nitz_short_ons_3= \
 	ril.subscription.types=NV,RUIM \
 	keyguard.no_require_sim=true \
 	ro.use_data_netmgrd=true \
