@@ -148,6 +148,8 @@ on post-fs-data
     copy /proc/apanic_app_threads /data/dontpanic/apanic_app_threads
     chown root log /data/dontpanic/apanic_app_threads
     chmod 0660 /data/dontpanic/apanic_app_threads
+    rm /data/misc/wifi/WCNSS_qcom_wlan_nv.bin
+    rm /data/misc/wifi/WCNSS_qcom_cfg.ini
 
 # directory for encryption management tool, enc_mgt_tool
     mkdir /data/emt 0770 root system
@@ -754,4 +756,10 @@ on property:service.adb.root=1
     write /sys/class/android_usb/android0/enable 0
     restart adbd
     write /sys/class/android_usb/android0/enable 1
+
+service conn_init /system/bin/logwrapper /system/bin/conn_init
+    class late_start
+    user system
+    group system wifi
+    oneshot
 

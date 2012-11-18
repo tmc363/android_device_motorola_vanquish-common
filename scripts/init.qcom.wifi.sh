@@ -89,7 +89,6 @@ case "$target" in
                 esac
                 ;;
         esac
-        echo > /dev/wcnss_wlan
         # Plumb down the device serial number
         serialno=`getprop ro.serialno`
         echo $serialno > /sys/devices/platform/wcnss_wlan.0/serial_number
