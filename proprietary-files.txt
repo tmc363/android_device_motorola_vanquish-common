@@ -9,7 +9,6 @@ bin/batch
 bin/bridgemgrd
 bin/btnvtool
 bin/cnd
-bin/curl
 bin/dbvc_atvc_property_set
 bin/ds_fmc_appd
 bin/dun-server
@@ -22,12 +21,10 @@ bin/port-bridge
 bin/ptt_socket_app
 bin/radish
 bin/rmt_storage
-bin/sensors.qcom
 bin/thermald
 bin/time_daemon
 bin/timedexec
 bin/wiperiface_v02
-#moto bins
 bin/whisperd
 bin/tcmd
 bin/tcmdhelp
@@ -45,7 +42,6 @@ bin/quipc_igsn
 bin/quipc_main
 bin/hci_qcomm_init
 bin/mm-pp-daemon
-bin/mm-qcamera-daemon
 
 #configs
 etc/OperatorPolicy.xml
@@ -58,7 +54,6 @@ etc/wifi/hostapd_default.conf
 etc/wifi/wpa_supplicant.conf
 
 #HAL
-lib/hw/camera.msm8960.so
 lib/hw/gps.default.so
 lib/hw/nfc.MSM8960.so
 lib/hw/sensorhub.msm8960.so
@@ -75,15 +70,9 @@ lib/libbabysit.so
 lib/libbson.so
 lib/libbt-aptx-4.0.4.so
 lib/libcaps.so
-lib/libchromatix_ov8820_default_video.so
-lib/libchromatix_ov8820_hfr_60fps.so
-lib/libchromatix_ov8820_preview.so
-lib/libchromatix_ov8820_video_hd.so
-lib/libchromatix_ov8820_zsl.so
 lib/libcneapiclient.so
 lib/libcneqmiutils.so
 lib/libcneutils.so
-lib/libcurl.so
 lib/libdataencrypt_utils.so
 lib/libdiag.so
 lib/libDivxDrm.so
@@ -110,9 +99,6 @@ lib/libloc_ext.so
 lib/libmm-abl-oem.so
 lib/libmm-abl.so
 lib/libmm-audio-resampler.so
-lib/libmmcamera_faceproc.so
-lib/libmmcamera_frameproc.so
-lib/libmmcamera_statsproc30.so
 lib/libmm-color-convertor.so
 lib/libmmjpeg.so
 lib/libmmmpod.so
@@ -131,7 +117,6 @@ lib/libnative_renderer.so
 lib/libnetmgr.so
 lib/libnfcpn544c3_fw.so
 lib/libNimsWrap.so
-lib/liboemcamera.so
 lib/libOmxAacDec.so
 lib/libOmxEvrcDec.so
 lib/libOmxQcelp13Dec.so
@@ -157,11 +142,7 @@ lib/libQWiFiSoftApCfg.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 lib/libsarqmictrl.so
-lib/libsensor1.so
-lib/libsensorhub_jni.so
-lib/libsensor_reg.so
 lib/libSHIMDivxDrm.so
-lib/libtcmdcameraservice.so
 lib/libtexture_mem.so
 lib/libtpa_core.so
 lib/libtpa.so
@@ -175,6 +156,27 @@ lib/libxt_v02.so
 lib/pp_proc_plugin.so
 lib/qnet-plugin.so
 lib/tcp-connections.so
+
+#sensors
+bin/sensors.qcom
+lib/libsensor1.so
+lib/libsensorhub_jni.so
+lib/libsensor_reg.so
+
+#camera
+bin/mm-qcamera-daemon
+lib/libmmcamera_faceproc.so
+lib/libmmcamera_frameproc.so
+lib/libmmcamera_statsproc30.so
+lib/liboemcamera.so
+lib/libtcmdcameraservice.so
+lib/libchromatix_ov8820_default_video.so
+lib/libchromatix_ov8820_hfr_60fps.so
+lib/libchromatix_ov8820_preview.so
+lib/libchromatix_ov8820_video_hd.so
+lib/libchromatix_ov8820_zsl.so
+lib/libchromatix_s5k4e1_default_video.so
+lib/libchromatix_s5k4e1_preview.so
 
 ##drm
 vendor/lib/drm/libdrmwvmplugin.so
@@ -191,6 +193,3 @@ etc/firmware/vidc.b02
 etc/firmware/vidc.b03
 etc/firmware/vidcfw.elf
 etc/firmware/vidc.mdt
-
-#firmware
-vendor/firmware/melfas_45_7_15.fw

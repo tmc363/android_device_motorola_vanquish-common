@@ -57,6 +57,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/wlanprima/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
 	$(LOCAL_PATH)/proprietary/wlanprima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
+#touchscreen
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/proprietary/melfas_45_7_15.fw:system/etc/firmware/melfas_45_7_15.fw
+
 #adreno
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/adreno/etc/firmware/a225_pfp.fw:system/etc/firmware/a225_pfp.fw \
