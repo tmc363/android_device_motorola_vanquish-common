@@ -92,15 +92,10 @@ case "$target" in
         # Plumb down the device serial number
         serialno=`getprop ro.serialno`
         echo $serialno > /sys/devices/platform/wcnss_wlan.0/serial_number
-#        if [ -e /persist/WCNSS_qcom_wlan_nv.bin ]; then
-#            test ! -e /data/misc/wifi/WCNSS_qcom_wlan_nv.bin && cp -a /persist/WCNSS_qcom_wlan_nv.bin /data/misc/wifi/
-#        else
-#            #firmware will be loaded from /data/misc/wifi
-#            test ! -e /data/misc/wifi/WCNSS_qcom_wlan_nv.bin && cp -a /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin /data/misc/wifi/
-#        fi
-#        test ! -e /data/misc/wifi/WCNSS_qcom_cfg.ini && cp -a /system/etc/firmware/wlan/prima/inis/WCNSS_qcom_cfg.ini /data/misc/wifi/
-#        chown wifi:wifi /data/misc/wifi/WCNSS_qcom_wlan_nv.bin
-#        chown wifi:wifi /data/misc/wifi/WCNSS_qcom_cfg.ini
+        if [ ! -e /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin ]; then
+            echo copying firmware from /persist/WCNSS_qcom_wlan_nv.bin to /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+            cp -a /persist/WCNSS_qcom_wlan_nv.bin /system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+        fi
         ;;
     msm8660*)
     exit 0
