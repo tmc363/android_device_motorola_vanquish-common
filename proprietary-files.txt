@@ -51,7 +51,6 @@ etc/encrypt.tab
 etc/quipc.conf
 etc/thermald.conf
 etc/wifi/hostapd_default.conf
-etc/wifi/wpa_supplicant.conf
 
 #HAL
 lib/hw/gps.default.so
