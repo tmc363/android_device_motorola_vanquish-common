@@ -21,8 +21,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/scripts/init.qcom.mdm_links.sh:system/etc/init.qcom.mdm_links.sh \
 	$(LOCAL_PATH)/scripts/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
 	$(LOCAL_PATH)/scripts/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
-	$(LOCAL_PATH)/scripts/mount_pds.sh:system/bin/mount_pds.sh \
-	$(LOCAL_PATH)/scripts/init.qcom.wifi.sh:system/etc/init.qcom.wifi.sh
+	$(LOCAL_PATH)/scripts/mount_pds.sh:system/bin/mount_pds.sh
 
 #init
 PRODUCT_COPY_FILES += \
@@ -100,6 +99,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.usb.ptp_adb=0x2e31 \
 	ro.hdmi.enable=true \
 	ro.product.model.exif=RAZR_HD
+
+#wifi
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.qc.sub.rstrtlvl=3 \
+	persist.sys.qc.sub.rdump.on=1 \
+	persist.sys.qc.sub.rdump.max=20
 
 # QCOM Display
 PRODUCT_PROPERTY_OVERRIDES += \
