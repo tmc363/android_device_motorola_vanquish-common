@@ -1,6 +1,3 @@
-#scripts
-bin/hardware_revisions.sh
-
 #bins
 bin/ap_gain.bin
 bin/ap_gain_mmul.bin

@@ -35,12 +35,6 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     user system
     group system camera inet
 
-#start GNSS/Sensor interface daemon
-#service gsiff_daemon /system/bin/gsiff_daemon
-#    class late_start
-#    user system
-#    group qcom_oncrpc
-
 on init
    mkdir /pds 0755 root root
    mkdir /firmware 0771 system system
@@ -138,7 +132,6 @@ on post-fs
     wait /dev/block/platform/msm_sdcc.1/by-name/persist
     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persist /persist ro nosuid nodev
 
-    exec /system/bin/logwrapper /system/bin/hardware_revisions.sh
     exec /system/bin/logwrapper /system/etc/init.qcom.modem_links.sh
     exec /system/bin/logwrapper /system/etc/init.qcom.mdm_links.sh
     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
@@ -543,40 +536,16 @@ on property:ro.baseband=mdm
     mkdir /data/qcks 0770 system system
     start kickstart
 
-service telnet /system/bin/telnetd
-    class core
-
 #start Authentec VPN service
 service vpnclientpm /system/bin/vpnclientpm
     class main
     disabled
     user root
 
-service JuniperVPNTools /system/bin/JuniperVPNTools
-    class main
-    user vpn
-    group vpn system net_admin net_raw
-
-service CifsMount /system/bin/CifsMount
-    class main
-    user  root
-    group system
-
-service poweroff /system/xbin/poweroff
-    class main
-    disabled
-    oneshot
-    keycodes 114 115 116 # VOL_DOWN + VOLUME_UP + PWR
-
 service qdumpd /system/bin/qdumpd
     class main
     user radio
     group log sdcard_rw
-
-#Run multiconfig script to check if config is updated
-service start_mc_service /system/bin/sh /system/bin/multiconfig_boot_script.sh
-    class main
-    oneshot
 
 # aplogd on at boot in emulator
 on property:ro.kernel.qemu=1
@@ -616,38 +585,9 @@ service diag_mdlog /system/bin/diag_mdlog-wrap
     group log system sdcard_rw
     disabled
 
-service getmd5 /system/bin/getmd5
-    user system
-    group system
-    oneshot
-    disabled
-
-on property:sys.boot_completed=1
-    start getmd5
-
 # Backup/Restore Feature
 on property:mot.backup_restore.status="Finished"
     start zygote
-
-service mot_backup /system/bin/logwrapper /system/xbin/run_backup /system/etc/backup_targets.csv
-    disabled
-    user root
-    oneshot
-
-service mot_restore /system/bin/logwrapper /system/xbin/run_restore /system/etc/backup_targets.csv
-    disabled
-    user root
-    oneshot
-
-on property:mot.backup_restore.action="run_backup"
-    setprop mot.backup_restore.status "Running"
-    stop zygote
-    start mot_backup
-
-on property:mot.backup_restore.action="run_restore"
-    setprop mot.backup_restore.status "Running"
-    stop zygote
-    start mot_restore
 
 # Define the trigger to Start FastDormancy service
 service start_fd  /system/bin/sh /system/bin/am startservice -a com.motorola.fastdormancy.start
