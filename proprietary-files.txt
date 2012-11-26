@@ -103,7 +103,6 @@ lib/libmmparser.so
 lib/libmmrtpencoder.so
 lib/libmmstereo.so
 lib/libmmstillomx.so
-lib/libmotdrm1_jni.so
 lib/libmotdrm1.so
 lib/libmotext_inf.so
 lib/libmoto_netutil.so
@@ -131,6 +130,8 @@ lib/libqmi_csi.so
 lib/libqmi_encdec.so
 lib/libqmiservices.so
 lib/libqmi.so
+lib/libqmi_client_qmux.so
+lib/libqcci_legacy.so
 lib/libqsap_sdk.so
 lib/libquipc_os_api.so
 lib/libquipc_ulp_adapter.so
@@ -166,13 +167,28 @@ lib/libmmcamera_frameproc.so
 lib/libmmcamera_statsproc30.so
 lib/liboemcamera.so
 lib/libtcmdcameraservice.so
+lib/libchromatix_imx074_default_video.so
+lib/libchromatix_imx074_preview.so
+lib/libchromatix_imx074_video_hd.so
+lib/libchromatix_imx074_zsl.so
+lib/libchromatix_imx091_default_video.so
+lib/libchromatix_imx091_preview.so
+lib/libchromatix_imx091_video_hd.so
+lib/libchromatix_ov2720_default_video.so
+lib/libchromatix_ov2720_preview.so
 lib/libchromatix_ov8820_default_video.so
 lib/libchromatix_ov8820_hfr_60fps.so
 lib/libchromatix_ov8820_preview.so
 lib/libchromatix_ov8820_video_hd.so
 lib/libchromatix_ov8820_zsl.so
-lib/libchromatix_s5k4e1_default_video.so
-lib/libchromatix_s5k4e1_preview.so
+lib/libchromatix_s5k3l1yx_default_video.so
+lib/libchromatix_s5k3l1yx_hfr_120fps.so
+lib/libchromatix_s5k3l1yx_hfr_60fps.so
+lib/libchromatix_s5k3l1yx_hfr_90fps.so
+lib/libchromatix_s5k3l1yx_preview.so
+lib/libchromatix_s5k3l1yx_video_hd.so
+lib/libchromatix_s5k3l1yx_zsl.so
+
 
 ##drm
 vendor/lib/drm/libdrmwvmplugin.so
@@ -181,7 +197,6 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 
 # graphics firmware
-etc/firmware/cyttsp_8960_cdp.hex
 etc/firmware/vidc_1080p.fw
 etc/firmware/vidc.b00
 etc/firmware/vidc.b01
