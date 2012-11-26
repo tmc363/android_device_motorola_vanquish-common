@@ -126,12 +126,6 @@ on post-fs
     wait /dev/block/platform/msm_sdcc.1/by-name/pds
     exec /system/bin/mount_pds.sh
 
-    wait /dev/block/platform/msm_sdcc.1/by-name/modem
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro nosuid nodev
-
-    wait /dev/block/platform/msm_sdcc.1/by-name/persist
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persist /persist ro nosuid nodev
-
     exec /system/bin/logwrapper /system/etc/init.qcom.modem_links.sh
     exec /system/bin/logwrapper /system/etc/init.qcom.mdm_links.sh
     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
