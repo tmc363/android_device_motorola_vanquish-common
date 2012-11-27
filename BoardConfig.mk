@@ -1,3 +1,5 @@
+USE_CAMERA_STUB := true
+
 -include device/motorola/msm8960-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/motorola/vanquish-common
