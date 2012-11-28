@@ -113,8 +113,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	debug.sf.hw=1 \
 	debug.gr.numframebuffers=3 \
 	persist.sys.ui.hw=true \
-	debug.composition.type=c2d \
-	debug.enabletr=0
+	debug.composition.type=dyn \
+	debug.enabletr=0 \
+	ro.hwui.text_cache_width=2048 \
+	debug.sf.no_hw_vsync=1
 
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
