@@ -237,5 +237,7 @@
         <item>dualmic_enabled=true=false</item>
     </string-array>
 
+    <!-- We dont have different firmware for wifi modes, prevent reloading it -->
+    <bool name="config_wifiApFirmwareReload">false</bool>
 
 </resources>
