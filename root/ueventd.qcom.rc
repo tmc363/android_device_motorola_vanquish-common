@@ -119,7 +119,7 @@
 
 # Anyone can read the logs, but if they're not in the "logs"
 # group, then they'll only see log entries for their UID.
-/dev/log/*                0662   root       log
+/dev/log/*                0666   root       log
 
 # the genlock client device node is world writable/readable.
 /dev/genlock              0666   root      root
