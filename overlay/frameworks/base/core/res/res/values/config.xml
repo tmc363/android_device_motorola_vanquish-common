@@ -228,7 +228,7 @@
     <integer name="config_carDockKeepsScreenOn">1</integer>
 
     <!-- Our amoled doesn't animate well. -->
-    <bool name="config_animateScreenLights">true</bool> 
+    <bool name="config_animateScreenLights">false</bool> 
 
     <!-- Set additional audio parameters for incall audio
                   Usage: parameter=onstring=offstring
