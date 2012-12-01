@@ -61,6 +61,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/melfas_45_7_15.fw:system/etc/firmware/melfas_45_7_15.fw
 
+# EGL config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/egl.cfg:system/lib/egl/egl.cfg
+
 #adreno
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/adreno/etc/firmware/a225_pfp.fw:system/etc/firmware/a225_pfp.fw \
