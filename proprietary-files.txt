@@ -41,8 +41,6 @@ bin/hci_qcomm_init
 bin/mm-pp-daemon
 
 #configs
-etc/OperatorPolicy.xml
-etc/UserPolicy.xml
 etc/ecryptfs.tab
 etc/encrypt.tab
 etc/quipc.conf
