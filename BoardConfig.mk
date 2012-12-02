@@ -24,7 +24,7 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
 BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := xt925,xt926,vanquish_u,vanquish
+TARGET_OTA_ASSERT_DEVICE := xt925,xt926,xt926dev,xt926vzw,vanquish_u,vanquish
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
