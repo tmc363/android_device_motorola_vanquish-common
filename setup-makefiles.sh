@@ -38,7 +38,6 @@ PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
-
 COUNT=`cat ../${DEVICE}/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app' | wc -l | awk {'print $1'}`
 for FILE in `cat ../${DEVICE}/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app'`; do
     COUNT=`expr $COUNT - 1`
@@ -47,6 +46,12 @@ for FILE in `cat ../${DEVICE}/proprietary-files.txt | grep -v ^# | cut -f1 -d '#
     fi
     echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
 done
+
+(cat << EOF) >> $MAKEFILE
+PRODUCT_COPY_FILES += \\
+EOF
+
+LINEEND=" \\"
 COUNT=`cat ../vanquish-common/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app' | wc -l | awk {'print $1'}`
 for FILE in `cat ../vanquish-common/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app'`; do
     COUNT=`expr $COUNT - 1`
