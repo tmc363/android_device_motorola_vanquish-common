@@ -128,7 +128,6 @@ lib/libOpenCL.so
 lib/libopenssl-smime.so
 lib/libpanorama_jni.so
 lib/libpanorama.so
-lib/libpn544_fw.so
 lib/libqc-opt.so
 lib/libqdi.so
 lib/libqdp.so
@@ -184,6 +183,7 @@ lib/libdataencrypt_openssl.so
 lib/libcsd-client.so
 lib/libcnefeatureconfig.so
 lib/libcurl.so
+vendor/firmware/libpn544_fw.so
 
 #sensors
 bin/sensors.qcom
@@ -220,3 +220,4 @@ etc/firmware/vidc.b02
 etc/firmware/vidc.b03
 etc/firmware/vidcfw.elf
 etc/firmware/vidc.mdt
+
