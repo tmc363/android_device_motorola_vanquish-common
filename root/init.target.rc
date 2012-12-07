@@ -135,6 +135,9 @@ on post-fs-data
     chown root log /data/dontpanic/apanic_app_threads
     chmod 0660 /data/dontpanic/apanic_app_threads
 
+    #load modules
+    insmod /system/lib/modules/cfg80211.ko
+    insmod /system/lib/modules/tcp_westwood.ko
     #initialize wlan
     write /dev/wcnss_wlan 1
     write /sys/module/wcnss_ssr_8960/parameters/enable_riva_ssr 1
