@@ -8,12 +8,6 @@
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool translatable="false" name="config_wifi_background_scan_support">false</bool>
 
-    <!-- Component name of the service providing network location support. -->
-    <string name="config_networkLocationProviderPackageName">com.google.android.location.NetworkLocationProvider</string>
-
-    <!-- Component name of the service providing geocoder API support. -->
-    <string name="config_geocodeProviderPackageName">com.google.android.location.GeocodeProvider</string>
-
     <!-- Flag indicating whether we should enable the automatic brightness in Settings.
                   config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
     <bool name="config_automatic_brightness_available">true</bool>
@@ -79,10 +73,6 @@
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
-
-    <!-- Flag indicating whether we should enable automatic brightness for
-                  the button and keyboard backlights. -->
-    <bool name="config_autoBrightnessButtonKeyboard">false</bool>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
                   autodetected from the Configuration. -->
@@ -230,15 +220,5 @@
 
     <!-- Our amoled doesn't animate well. -->
     <bool name="config_animateScreenLights">false</bool> 
-
-    <!-- Set additional audio parameters for incall audio
-                  Usage: parameter=onstring=offstring
-         Examples: <item>realcall=on=off</item> <item>dualmic_enabled=true=false</item> <item>mic_boost=yes=no</item> -->
-    <string-array name="config_telephony_set_audioparameters" translatable="false">
-        <item>dualmic_enabled=true=false</item>
-    </string-array>
-
-    <!-- We dont have different firmware for wifi modes, prevent reloading it -->
-    <bool name="config_wifiApFirmwareReload">false</bool>
 
 </resources>
