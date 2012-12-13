@@ -134,8 +134,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.ui.hw=true \
 	debug.composition.type=c2d \
 	debug.enabletr=0 \
-	ro.hwui.text_cache_width=2048 \
-	debug.sf.no_hw_vsync=1
+	ro.hwui.text_cache_width=2048
 
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
