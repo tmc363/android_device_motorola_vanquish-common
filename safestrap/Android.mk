@@ -18,8 +18,7 @@ LOCAL_SRC_FILES:= \
 	signal_handler.c \
 	init_parser.c \
 	ueventd.c \
-	ueventd_parser.c \
-	watchdogd.c
+	ueventd_parser.c
 
 LOCAL_CFLAGS += -DBOARD_HAS_LOCKED_BOOTLOADER
 
