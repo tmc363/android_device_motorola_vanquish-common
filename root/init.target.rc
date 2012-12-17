@@ -28,6 +28,7 @@
 #
 
 import init.mmi.usb.rc
+import init.safestrap.rc
 
 #start camera server as daemon
 service qcamerasvr /system/bin/logwrapper /system/bin/qcamerasrvwrapper.sh
