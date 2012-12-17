@@ -88,12 +88,11 @@ PRODUCT_COPY_FILES += \
     system/core/rootdir/init.rc:system/etc/rootfs/init.rc \
     system/core/rootdir/ueventd.rc:system/etc/rootfs/ueventd.rc \
     $(LOCAL_PATH)/root/init.qcom.rc:system/etc/rootfs/init.qcom.rc \
-    $(LOCAL_PATH)/safestrap/init.target.rc:system/etc/rootfs/init.target.rc \
+    $(LOCAL_PATH)/root/init.target.rc:system/etc/rootfs/init.target.rc \
+    $(LOCAL_PATH)/safestrap/init.safestrap.rc:system/etc/rootfs/init.safestrap.rc \
     $(LOCAL_PATH)/root/init.mmi.usb.rc:system/etc/rootfs/init.mmi.usb.rc \
     $(LOCAL_PATH)/root/ueventd.qcom.rc:system/etc/rootfs/ueventd.qcom.rc \
     $(LOCAL_PATH)/safestrap/default.prop:system/etc/rootfs/default.prop \
-    $(LOCAL_PATH)/safestrap/kernelmodules/cfg80211.ko:system/lib/modules/prima/cfg80211.ko \
-    $(LOCAL_PATH)/safestrap/kernelmodules/prima_wlan.ko:system/lib/modules/prima/prima_wlan.ko \
     $(OUT)/root/sbin/adbd:system/etc/rootfs/sbin/adbd \
     $(OUT)/fake_packages/init2:system/etc/rootfs/init
 
