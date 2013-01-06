@@ -27,9 +27,7 @@
 
 #include "msm_camera_query.h"
 
-#ifdef __KERNEL__
 #include <linux/ion.h>
-#endif
 
 #define VFE_FRAME_NUM_MAX	0x00FFFFFF
 #define ZERO_OUT_FRAME		0xFF000000
@@ -358,7 +356,7 @@ struct msm_isp_event_ctrl {
 		struct msm_cam_evt_divert_frame div_frame;
 		struct msm_mctl_pp_event_info pp_event_info;
 	} isp_data;
-	uint32_t evt_id;
+	uint32_t trans_id;
 };
 
 #define MSM_CAM_RESP_CTRL              0
