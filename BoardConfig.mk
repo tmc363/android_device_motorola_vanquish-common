@@ -19,8 +19,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-TARGET_NO_HW_OVERLAY := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK -DQCOM_ICS_COMPAT
 BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 
 #bluetooth
