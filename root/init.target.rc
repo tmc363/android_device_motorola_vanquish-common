@@ -33,8 +33,9 @@ import init.safestrap.rc
 #start camera server as daemon
 service qcamerasvr /system/bin/logwrapper /system/bin/qcamerasrvwrapper.sh
     class late_start
-    user system
-    group system camera inet
+    user media
+    group system camera inet input graphics
+
 
 on init
    mkdir /pds 0755 root root
