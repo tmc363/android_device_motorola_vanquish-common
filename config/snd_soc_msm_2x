@@ -2340,8 +2340,8 @@ SectionDevice
                 'SLIM_0_RX Channels':0:One
                 'RX3 MIX1 INP1':0:RX1
                 'RX4 DSM MUX':0:DSM_INV
-                'LINEOUT1 Volume':1:100%
-                'LINEOUT3 Volume':1:100%
+                'LINEOUT1 Volume':1:30
+                'LINEOUT3 Volume':1:30
         EndSequence
 
         DisableSequence
@@ -2364,8 +2364,8 @@ SectionDevice
                 'SLIM_0_RX Channels':0:One
                 'RX3 MIX1 INP1':0:RX1
                 'RX4 DSM MUX':0:DSM_INV
-                'LINEOUT1 Volume':1:100%
-                'LINEOUT3 Volume':1:100%
+                'LINEOUT1 Volume':1:30
+                'LINEOUT3 Volume':1:30
         EndSequence
 
         DisableSequence
@@ -2388,8 +2388,8 @@ SectionDevice
 		'SLIM_0_RX Channels':0:Two
 		'RX3 MIX1 INP1':0:RX1
 		'RX5 MIX1 INP1':0:RX2
-                'LINEOUT1 Volume':1:100%
-                'LINEOUT2 Volume':1:100%
+                'LINEOUT1 Volume':1:75
+                'LINEOUT2 Volume':1:75
 	EndSequence
 
 	DisableSequence
@@ -2410,9 +2410,9 @@ SectionDevice
 
 	EnableSequence
 		'SLIM_0_RX Channels':0:Two
-                'LINEOUT1 Volume':1:100%
-                'LINEOUT2 Volume':1:100%
-                'LINEOUT3 Volume':1:100%
+                'LINEOUT1 Volume':1:14
+                'LINEOUT2 Volume':1:14
+                'LINEOUT3 Volume':1:14
 		'RX3 MIX1 INP1':0:RX1
 		'RX4 DSM MUX':0:DSM_INV
 		'RX5 MIX1 INP1':0:RX2
@@ -2440,8 +2440,8 @@ SectionDevice
 		'SLIM_0_RX Channels':0:Two
 		'RX3 MIX1 INP1':0:RX1
 		'RX5 MIX1 INP1':0:RX2
-                'LINEOUT1 Volume':1:100%
-                'LINEOUT2 Volume':1:100%
+                'LINEOUT1 Volume':1:75
+                'LINEOUT2 Volume':1:75
 	EndSequence
 
 	DisableSequence
@@ -2520,8 +2520,8 @@ SectionDevice
                 'SLIM_0_RX Channels':0:Two
                 'RX3 MIX1 INP1':0:RX1
                 'RX4 DSM MUX':0:DSM_INV
-                'LINEOUT1 Volume':1:100%
-                'LINEOUT3 Volume':1:100%
+                'LINEOUT1 Volume':1:14
+                'LINEOUT3 Volume':1:14
                 'RX1 MIX1 INP1':0:RX1
                 'RX2 MIX1 INP1':0:RX2
                 'HPHL DAC Switch':1:1
