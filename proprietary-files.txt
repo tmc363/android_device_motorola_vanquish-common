@@ -89,6 +89,7 @@ lib/libFileMux.so
 lib/libfrsdk.so
 lib/libgemini.so
 lib/libgps.so
+lib/libloc_api_v02.so
 lib/libidl.so
 lib/libimage-jpeg-enc-omx-comp.so
 lib/libimage-omx-common.so
