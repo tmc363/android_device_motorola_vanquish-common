@@ -100,11 +100,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/etc/init.local.rc:system/etc/rootfs/init.cm.rc
 
-PRODUCT_LOCALES := en_US
-PRODUCT_LOCALES += xhdpi
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
 #misc
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.fuse_sdcard=true \
