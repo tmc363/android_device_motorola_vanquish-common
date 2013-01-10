@@ -34,11 +34,15 @@ LOCAL_PATH := vendor/$VENDOR/$DEVICE
 
 -include device/${VENDOR}/${DEVICE}/prebuilt.mk
 
-PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
 COUNT=`cat ../${DEVICE}/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app' | wc -l | awk {'print $1'}`
+if [ $COUNT -gt 0 ]; then
+cat <<EOF >> $MAKEFILE
+PRODUCT_COPY_FILES += \\
+EOF
+fi
 for FILE in `cat ../${DEVICE}/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app'`; do
     COUNT=`expr $COUNT - 1`
     if [ $COUNT = "0" ]; then
@@ -47,12 +51,13 @@ for FILE in `cat ../${DEVICE}/proprietary-files.txt | grep -v ^# | cut -f1 -d '#
     echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
 done
 
-(cat << EOF) >> $MAKEFILE
-PRODUCT_COPY_FILES += \\
-EOF
-
 LINEEND=" \\"
 COUNT=`cat ../vanquish-common/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app' | wc -l | awk {'print $1'}`
+if [ $COUNT -gt 0 ]; then
+cat << EOF >> $MAKEFILE
+PRODUCT_COPY_FILES += \\
+EOF
+fi
 for FILE in `cat ../vanquish-common/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -ve '^$\|^app'`; do
     COUNT=`expr $COUNT - 1`
     if [ $COUNT = "0" ]; then
