@@ -178,9 +178,7 @@ lib/libdataencrypt_openssl.so
 lib/libcsd-client.so
 lib/libcnefeatureconfig.so
 lib/libcurl.so
-
 vendor/firmware/libpn544_fw.so
-etc/firmware/melfas_45_7_15.fw
 
 #sensors
 bin/sensors.qcom
