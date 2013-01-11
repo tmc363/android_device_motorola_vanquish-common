@@ -121,7 +121,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QCOM Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320 \
 	debug.egl.hw=1 \
 	debug.sf.hw=1 \
 	debug.gr.numframebuffers=3 \
