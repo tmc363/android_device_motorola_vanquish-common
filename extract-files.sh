@@ -7,8 +7,10 @@ fi
 
 test -z "$DEVICE" && echo device not set && exit 2
 test -z "$VENDOR" && echo vendor not set && exit 2
+test -z "$VENDORDEVICEDIR" && VENDORDEVICEDIR=$DEVICE
+export VENDORDEVICEDIR
 
-BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
+BASE=../../../vendor/$VENDOR/$VENDORDEVICEDIR/proprietary
 rm -rf $BASE/*
 rm -rf $BASE/../packages 2> /dev/null
 for FILE in `cat ../vanquish-common/proprietary-files.txt | grep -v ^# | cut -f1 -d '#' | grep -v ^$`; do
@@ -42,5 +44,6 @@ for FILE in `cat ../${DEVICE}/proprietary-files.txt | grep -v ^# | cut -f1 -d '#
     fi
 done
 rmdir ${BASE}/app 2> /dev/null
+
 
 ../vanquish-common/setup-makefiles.sh
