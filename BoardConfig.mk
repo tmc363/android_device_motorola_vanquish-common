@@ -21,9 +21,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 
 BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 
-#bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/include/bdroid
-
 # assert
 TARGET_OTA_ASSERT_DEVICE := xt925,xt926,xt926dev,xt926vzw,xt907,vanquish_u,vanquish,scorpion_mini
 
