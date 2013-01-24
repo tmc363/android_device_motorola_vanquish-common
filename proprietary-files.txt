@@ -156,7 +156,6 @@ lib/libwfdcommonutils.so
 lib/libwifiscanner.so
 lib/libwiperjni_v02.so
 lib/libxml.so
-lib/libxml2.so
 lib/libxt_v02.so
 lib/pp_proc_plugin.so
 lib/qnet-plugin.so
