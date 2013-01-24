@@ -337,11 +337,6 @@ service iprenew_p2p /system/bin/logwrapper /system/bin/dhcpcd -n -d
     disabled
     oneshot
 
-service iprenew_usbeth0 /system/bin/dhcpcd -nBK
-    class late_start
-    disabled
-    oneshot
-
 service dhcpcd_bnep0 /system/bin/dhcpcd -B -t 30
     class late_start
     disabled
