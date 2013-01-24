@@ -79,6 +79,7 @@ lib/libdataencrypt_utils.so
 lib/libdiag.so
 lib/libDivxDrm.so
 lib/libdnshostprio.so
+lib/libdrmfs.so
 lib/libdsi_netctrl.so
 lib/libdsprofile.so
 lib/libdss.so
@@ -133,6 +134,7 @@ lib/libqmi.so
 lib/libqmi_client_qmux.so
 lib/libqcci_legacy.so
 lib/libqsap_sdk.so
+lib/libQSEEComAPI.so
 lib/libquipc_os_api.so
 lib/libquipc_ulp_adapter.so
 lib/libQWiFiSoftApCfg.so
@@ -149,6 +151,7 @@ lib/libwfdcommonutils.so
 lib/libwifiscanner.so
 lib/libwiperjni_v02.so
 lib/libxml.so
+lib/libxml2.so
 lib/libxt_v02.so
 lib/pp_proc_plugin.so
 lib/qnet-plugin.so
