@@ -2358,7 +2358,7 @@ EndSection
 
 SectionDevice
 	Name "Voice Speaker"
-	Comment "Speaker Rx device"
+	Comment "Voice Speaker Rx device"
 
         EnableSequence
                 'SLIM_0_RX Channels':0:One
@@ -3379,7 +3379,7 @@ SectionDevice
                 'MICBIAS3 CAPLESS Switch':1:0
         EndSequence
 
-	ACDBID	13:2
+	ACDBID	11:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
