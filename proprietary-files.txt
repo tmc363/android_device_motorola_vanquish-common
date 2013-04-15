@@ -57,7 +57,6 @@ etc/wifi/hostapd_default.conf
 etc/xtwifi.conf
 
 #HAL
-lib/hw/camera.msm8960.so
 lib/hw/sensorhub.msm8960.so
 lib/hw/sensors.msm8960.so
 lib/hw/sensors.oem.so
@@ -173,7 +172,6 @@ lib/libnativedrm1.so
 lib/libmmwfdinterface.so
 lib/libmmwfdsinkinterface.so
 lib/libmmwfdsrcinterface.so
-lib/libgsl.so
 lib/libdataencrypt_openssl.so
 lib/libcsd-client.so
 lib/libcnefeatureconfig.so
