@@ -74,7 +74,7 @@ PRODUCT_COPY_FILES += \
 
 # CODEX-specific init file for SafeStrap
 PRODUCT_COPY_FILES += \
-    vendor/codex/prebuilt/common/etc/init.local926.rc:system/etc/rootfs/init.codex.rc
+    vendor/codex/prebuilt/common/etc/init.codex926.rc:system/etc/rootfs/init.codex.rc
 
 #misc
 PRODUCT_PROPERTY_OVERRIDES += \
