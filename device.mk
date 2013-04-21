@@ -72,9 +72,9 @@ PRODUCT_COPY_FILES += \
     $(OUT)/root/sbin/adbd:system/etc/rootfs/sbin/adbd \
     $(OUT)/fake_packages/init2:system/etc/rootfs/init
 
-# CM-specific init file for SafeStrap
+# CODEX-specific init file for SafeStrap
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/init.local.rc:system/etc/rootfs/init.cm.rc
+    vendor/codex/prebuilt/common/etc/init.local926.rc:system/etc/rootfs/init.codex.rc
 
 #misc
 PRODUCT_PROPERTY_OVERRIDES += \
