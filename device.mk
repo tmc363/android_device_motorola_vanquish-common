@@ -11,29 +11,28 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 #scripts
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/scripts/init.goldfish.sh:system/etc/init.goldfish.sh \
 	$(LOCAL_PATH)/scripts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
 	$(LOCAL_PATH)/scripts/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
 	$(LOCAL_PATH)/scripts/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
 	$(LOCAL_PATH)/scripts/init.qcom.mdm_links.sh:system/etc/init.qcom.mdm_links.sh \
 	$(LOCAL_PATH)/scripts/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
 	$(LOCAL_PATH)/scripts/init.qcom.post_boot.sh:system/etc/init.qcom.post_boot.sh \
+	$(LOCAL_PATH)/scripts/mount_pds.sh:system/bin/mount_pds.sh \
 	$(LOCAL_PATH)/scripts/qcamerasrvwrapper.sh:system/bin/qcamerasrvwrapper.sh \
-	$(LOCAL_PATH)/scripts/sensorsqcomwrapper.sh:system/bin/sensorsqcomwrapper.sh \
-	$(LOCAL_PATH)/scripts/mount_pds.sh:system/bin/mount_pds.sh
+	$(LOCAL_PATH)/scripts/sensorsqcomwrapper.sh:system/bin/sensorsqcomwrapper.sh
 
 #init
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/root/ueventd.qcom.rc:root/ueventd.qcom.rc \
+	$(LOCAL_PATH)/root/fstab.qcom:root/fstab.qcom \
 	$(LOCAL_PATH)/root/init.mmi.usb.rc:root/init.mmi.usb.rc \
 	$(LOCAL_PATH)/root/init.mmi.usb.sh:root/init.mmi.usb.sh \
 	$(LOCAL_PATH)/root/init.msm.rc:root/init.msm.rc \
-	$(LOCAL_PATH)/root/init.qcom.sh:root/init.qcom.sh \
 	$(LOCAL_PATH)/root/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
 	$(LOCAL_PATH)/root/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
 	$(LOCAL_PATH)/root/init.qcom.rc:root/init.qcom.rc \
-	$(LOCAL_PATH)/root/fstab.qcom:root/fstab.qcom \
-	$(LOCAL_PATH)/root/init.target.rc:root/init.target.rc
+	$(LOCAL_PATH)/root/init.qcom.sh:root/init.qcom.sh \
+	$(LOCAL_PATH)/root/init.target.rc:root/init.target.rc \
+	$(LOCAL_PATH)/root/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 #media
 PRODUCT_COPY_FILES += \
@@ -58,23 +57,6 @@ PRODUCT_COPY_FILES += \
 # EGL config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/egl.cfg:system/lib/egl/egl.cfg
-
-#safestrap support
-PRODUCT_COPY_FILES += \
-    system/core/rootdir/init.rc:system/etc/rootfs/init.rc \
-    system/core/rootdir/ueventd.rc:system/etc/rootfs/ueventd.rc \
-    $(LOCAL_PATH)/root/init.qcom.rc:system/etc/rootfs/init.qcom.rc \
-    $(LOCAL_PATH)/root/init.target.rc:system/etc/rootfs/init.target.rc \
-    $(LOCAL_PATH)/root/init.mmi.usb.rc:system/etc/rootfs/init.mmi.usb.rc \
-    $(LOCAL_PATH)/root/ueventd.qcom.rc:system/etc/rootfs/ueventd.qcom.rc \
-    $(LOCAL_PATH)/safestrap/init.safestrap.rc:system/etc/rootfs/init.safestrap.rc \
-    $(LOCAL_PATH)/safestrap/default.prop:system/etc/rootfs/default.prop \
-    $(OUT)/root/sbin/adbd:system/etc/rootfs/sbin/adbd \
-    $(OUT)/fake_packages/init2:system/etc/rootfs/init
-
-# CODEX-specific init file for SafeStrap
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.carbon926.rc:system/etc/rootfs/init.carbon.rc
 
 #misc
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -125,8 +107,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # IDC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/melfas-ts.idc:system/usr/idc/melfas-ts.idc \
-    $(LOCAL_PATH)/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-    $(LOCAL_PATH)/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     $(LOCAL_PATH)/idc/evfwd.idc:system/usr/idc/evfwd.idc
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
